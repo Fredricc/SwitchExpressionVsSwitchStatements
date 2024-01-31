@@ -28,6 +28,7 @@ namespace SwitchExpressionVsSwitchStatements
                 return Unit switch
                 {
 
+                    TemperatureUnit.Celsius when Value > 100 => Math.Round(Value, 0),
                     TemperatureUnit.Celsius => Value,
                     TemperatureUnit.Fahrenheit => (Value - 32) * 5 / 9,
                     TemperatureUnit.Kelvin => Value - 273.15m,
